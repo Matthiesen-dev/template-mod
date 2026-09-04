@@ -1,4 +1,3 @@
-
 plugins {
     id("matthiesen-loader")
     alias(libs.plugins.fabric.loom)
