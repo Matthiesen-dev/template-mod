@@ -1,5 +1,5 @@
 [versions]
-fabric-loom = "1.8-SNAPSHOT"
+fabric-loom = "1.15-SNAPSHOT"
 neoforge-moddev = "2.0.146"
 publish = "0.35.0"
 kotlin = "2.2.20"

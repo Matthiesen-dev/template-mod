@@ -28,6 +28,7 @@ loom {
             runDir("runs/server")
         }
     }
+
 }
 
 @Suppress("UnstableApiUsage")

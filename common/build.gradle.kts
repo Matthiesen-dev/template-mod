@@ -1,11 +1,7 @@
-import org.gradle.api.artifacts.VersionCatalogsExtension
-
 plugins {
     id("matthiesen-common")
     alias(libs.plugins.neoforged.moddev)
 }
-
-val libs = the<VersionCatalogsExtension>().named("libs")
 
 neoForge {
     neoFormVersion = property("neo_form_version").toString()
@@ -22,9 +18,8 @@ neoForge {
 }
 
 dependencies {
-    compileOnly(libs.findLibrary("sponge-mixin").get())
-    compileOnly(libs.findLibrary("mixin-extras").get())
-    annotationProcessor(libs.findLibrary("mixin-extras").get())
+    compileOnly(libs.bundles.common.mixin)
+    annotationProcessor(libs.mixin.extras)
 }
 
 val commonJava = configurations.create("commonJava") {
