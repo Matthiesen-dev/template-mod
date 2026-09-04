@@ -1,5 +1,6 @@
 rootProject.name = "template-mod"
 
+@Suppress("UnstableApiUsage")
 pluginManagement {
     repositories {
         gradlePluginPortal()
