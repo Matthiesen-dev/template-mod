@@ -1,0 +1,27 @@
+[versions]
+fabric-loom = "1.8-SNAPSHOT"
+neoforge-moddev = "2.0.146"
+publish = "0.35.0"
+kotlin = "2.2.20"
+fabric-api = "0.109.0+1.21.1"
+
+
+# mixin
+sponge-mixin = "0.8.5"
+mixin-extras = "0.5.4"
+
+[plugins]
+fabric-loom = { id = "fabric-loom", version.ref = "fabric-loom" }
+neoforged-moddev = { id = "net.neoforged.moddev", version.ref = "neoforge-moddev" }
+
+[libraries]
+publish = { group = "com.vanniktech", name = "gradle-maven-publish-plugin", version.ref = "publish" }
+kotlin-gradle = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+fabric-api = { group = "net.fabricmc.fabric-api", name = "fabric-api", version.ref = "fabric-api" }
+
+# mixin
+sponge-mixin = { group = "org.spongepowered", name = "mixin", version.ref = "sponge-mixin" }
+mixin-extras = { group = "io.github.llamalad7", name = "mixinextras-common", version.ref = "mixin-extras" }
+
+[bundles]
+common-mixin = ["sponge-mixin", "mixin-extras"]
