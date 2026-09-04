@@ -19,25 +19,25 @@ neoForge {
     runs {
         configureEach {
             systemProperty("neoforge.enabledGameTestNamespaces", property("mod_id").toString())
-            ideName = "NeoForge ${name.replaceFirstChar(Char::titlecase)} (${rootProject.path}${projectDir.toPath().let { rootDir.toPath().relativize(it).toString() }.let { if (it.isEmpty()) "" else ":${it.replace('/', ':')}" }})"
+            ideName = "NeoForge ${name.replaceFirstChar(Char::titlecase)} (${rootProject.path}${projectDir.toPath().let { rootDir.toPath().relativize(it).toString() }.let { if (it.isEmpty()) "" else it.replace('/', ':') }})"
         }
 
         create("client") {
             client()
         }
 
-        create("data") {
-            data()
-            programArguments.addAll(
-                "--mod",
-                property("mod_id").toString(),
-                "--all",
-                "--output",
-                file("src/generated/resources").absolutePath,
-                "--existing",
-                file("src/main/resources").absolutePath
-            )
-        }
+//        create("data") {
+//            data()
+//            programArguments.addAll(
+//                "--mod",
+//                property("mod_id").toString(),
+//                "--all",
+//                "--output",
+//                file("src/generated/resources").absolutePath,
+//                "--existing",
+//                file("src/main/resources").absolutePath
+//            )
+//        }
 
         create("server") {
             server()
@@ -51,6 +51,6 @@ neoForge {
     }
 }
 
-sourceSets.main {
-    resources.srcDir("src/generated/resources")
-}
+//sourceSets.main {
+//    resources.srcDir("src/generated/resources")
+//}
