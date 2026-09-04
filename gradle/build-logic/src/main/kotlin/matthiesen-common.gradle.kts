@@ -14,6 +14,7 @@ val githubUrl = property("github_url").toString()
 val javaVersion = property("java_version").toString()
 val modName = property("mod_name").toString()
 val modAuthor = property("mod_author").toString()
+val credits = property("credits").toString()
 val modId = property("mod_id").toString()
 val minecraftVersion = property("minecraft_version").toString()
 val minecraftVersionRange = property("minecraft_version_range").toString()
@@ -174,6 +175,7 @@ tasks {
             "mod_id" to modId,
             "license" to licenseName,
             "description" to descriptionText,
+            "credits" to credits,
             "java_version" to javaVersion,
             "github_url" to githubUrl,
             "modrinth_url" to modrinthUrl,
