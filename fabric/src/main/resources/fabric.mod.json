@@ -16,7 +16,7 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "dev.matthiesen.template_mod.ExampleMod"
+          "dev.matthiesen.template_mod.fabric.ExampleMod"
         ]
     },
     "mixins": [

@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "dev.matthiesen.template_mod.mixin",
+  "package": "dev.matthiesen.template_mod.neoforge.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [],
   "client": [

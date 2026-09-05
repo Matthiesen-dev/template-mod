@@ -1,6 +1,6 @@
-package dev.matthiesen.template_mod.mixin;
+package dev.matthiesen.template_mod.neoforge.mixin;
 
-import dev.matthiesen.template_mod.Constants;
+import dev.matthiesen.template_mod.common.Constants;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;

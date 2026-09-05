@@ -1,6 +1,8 @@
-package dev.matthiesen.template_mod;
+package dev.matthiesen.template_mod.neoforge;
 
 
+import dev.matthiesen.template_mod.common.CommonClass;
+import dev.matthiesen.template_mod.common.Constants;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 

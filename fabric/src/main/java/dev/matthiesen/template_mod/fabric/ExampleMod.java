@@ -1,5 +1,7 @@
-package dev.matthiesen.template_mod;
+package dev.matthiesen.template_mod.fabric;
 
+import dev.matthiesen.template_mod.common.CommonClass;
+import dev.matthiesen.template_mod.common.Constants;
 import net.fabricmc.api.ModInitializer;
 
 public class ExampleMod implements ModInitializer {

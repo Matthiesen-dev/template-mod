@@ -1,6 +1,6 @@
-package dev.matthiesen.template_mod;
+package dev.matthiesen.template_mod.common;
 
-import dev.matthiesen.template_mod.platform.Services;
+import dev.matthiesen.template_mod.common.platform.Services;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Items;
 

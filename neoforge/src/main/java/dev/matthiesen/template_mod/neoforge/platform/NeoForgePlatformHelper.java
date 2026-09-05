@@ -1,6 +1,6 @@
-package dev.matthiesen.template_mod.platform;
+package dev.matthiesen.template_mod.neoforge.platform;
 
-import dev.matthiesen.template_mod.platform.services.IPlatformHelper;
+import dev.matthiesen.template_mod.common.platform.services.IPlatformHelper;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.loading.FMLLoader;
 

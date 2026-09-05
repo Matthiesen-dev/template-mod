@@ -1,7 +1,7 @@
-package dev.matthiesen.template_mod.platform;
+package dev.matthiesen.template_mod.common.platform;
 
-import dev.matthiesen.template_mod.Constants;
-import dev.matthiesen.template_mod.platform.services.IPlatformHelper;
+import dev.matthiesen.template_mod.common.Constants;
+import dev.matthiesen.template_mod.common.platform.services.IPlatformHelper;
 
 import java.util.ServiceLoader;
 

@@ -1,4 +1,4 @@
-package dev.matthiesen.template_mod.platform.services;
+package dev.matthiesen.template_mod.common.platform.services;
 
 public interface IPlatformHelper {
 
