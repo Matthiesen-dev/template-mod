@@ -33,11 +33,10 @@ loom {
 
 @Suppress("UnstableApiUsage")
 dependencies {
-    minecraft("com.mojang:minecraft:${property("minecraft_version")}")
+    minecraft(libs.minecraft.fabric)
     mappings(loom.layered {
         officialMojangMappings()
-        parchment("org.parchmentmc.data:parchment-${property("parchment_minecraft")}:${property("parchment_version")}@zip")
+        parchment("org.parchmentmc.data:parchment-${libs.versions.minecraft.get()}:${libs.versions.parchment.get()}@zip")
     })
-    modImplementation("net.fabricmc:fabric-loader:${property("fabric_loader_version")}")
-    modImplementation(libs.fabric.api)
+    modImplementation(libs.bundles.fabric.mods)
 }

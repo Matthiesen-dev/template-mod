@@ -1,13 +1,21 @@
 import org.gradle.kotlin.dsl.configure
+import org.gradle.kotlin.dsl.the
 import org.gradle.kotlin.dsl.withType
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.gradle.api.artifacts.VersionCatalogsExtension
 
 plugins {
     id("java-library")
     id("org.jetbrains.kotlin.jvm")
 }
 
+val libs = the<VersionCatalogsExtension>().named("libs")
+
+val resolvedModVersion = providers.environmentVariable("RELEASE_VERSION")
+    .orElse(providers.gradleProperty("version"))
+    .orNull
+    ?: error("Set RELEASE_VERSION or version (e.g. in gradle.properties / -Pversion=...)")
 val archivesBaseName = property("archives_base_name").toString()
 val descriptionText = property("description").toString()
 val githubUrl = property("github_url").toString()
@@ -16,18 +24,15 @@ val modName = property("mod_name").toString()
 val modAuthor = property("mod_author").toString()
 val credits = property("credits").toString()
 val modId = property("mod_id").toString()
-val minecraftVersion = property("minecraft_version").toString()
 val minecraftVersionRange = property("minecraft_version_range").toString()
-val fabricVersion = property("fabric_version").toString()
-val fabricLoaderVersion = property("fabric_loader_version").toString()
 val licenseName = property("license").toString()
 val modrinthUrl = property("modrinth_url").toString()
-val neoforgeVersion = property("neoforge_version").toString()
 val neoforgeLoaderVersionRange = property("neoforge_loader_version_range").toString()
-val resolvedModVersion = providers.environmentVariable("RELEASE_VERSION")
-    .orElse(providers.gradleProperty("version"))
-    .orNull
-    ?: error("Set RELEASE_VERSION or version (e.g. in gradle.properties / -Pversion=...)")
+
+val minecraftVersion = libs.findVersion("minecraft").get().requiredVersion
+val fabricVersion = libs.findVersion("fabric-version").get().requiredVersion
+val fabricLoaderVersion = libs.findVersion("fabric-loader").get().requiredVersion
+val neoforgeVersion = libs.findVersion("neoforge-loader").get().requiredVersion
 
 group = property("group").toString()
 version = resolvedModVersion

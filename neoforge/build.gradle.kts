@@ -4,7 +4,7 @@ plugins {
 }
 
 neoForge {
-    version = property("neoforge_version").toString()
+    version = libs.versions.neoforge.loader.get()
 
     val accessTransformer = project(":common").file("src/main/resources/META-INF/accesstransformer.cfg")
     if (accessTransformer.exists()) {
@@ -12,8 +12,8 @@ neoForge {
     }
 
     parchment {
-        minecraftVersion = property("parchment_minecraft").toString()
-        mappingsVersion = property("parchment_version").toString()
+        minecraftVersion = libs.versions.minecraft.get()
+        mappingsVersion = libs.versions.parchment.get()
     }
 
     runs {

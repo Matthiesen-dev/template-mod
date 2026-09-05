@@ -12,5 +12,4 @@ repositories {
 
 dependencies {
     implementation(libs.kotlin.gradle)
-    implementation(libs.publish)
 }
