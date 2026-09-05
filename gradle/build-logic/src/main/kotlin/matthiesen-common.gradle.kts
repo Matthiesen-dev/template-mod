@@ -95,7 +95,6 @@ repositories {
 
 configure<JavaPluginExtension> {
     withSourcesJar()
-//    withJavadocJar()
     sourceCompatibility = JavaVersion.VERSION_21
     targetCompatibility = JavaVersion.VERSION_21
 }
@@ -113,17 +112,6 @@ listOf("apiElements", "runtimeElements", "sourcesElements", "javadocElements").f
         }
     }
 }
-
-//extensions.configure<PublishingExtension>("publishing") {
-//    publications.register<MavenPublication>("mavenJava") {
-//        artifactId = base.archivesName.get()
-//        from(components["java"])
-//    }
-//}
-//
-//extensions.configure<MavenPublishBaseExtension>("mavenPublishing") {
-//    publishToMavenCentral(automaticRelease = false)
-//}
 
 tasks {
     withType<JavaCompile>().configureEach {
