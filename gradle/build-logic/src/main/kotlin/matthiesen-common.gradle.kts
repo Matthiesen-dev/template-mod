@@ -101,7 +101,7 @@ configure<JavaPluginExtension> {
 }
 
 base {
-    archivesName.set("${archivesBaseName}-${project.name}-${minecraftVersion}")
+    archivesName.set("${archivesBaseName}-${project.name}")
 }
 
 listOf("apiElements", "runtimeElements", "sourcesElements", "javadocElements").forEach { variant ->
