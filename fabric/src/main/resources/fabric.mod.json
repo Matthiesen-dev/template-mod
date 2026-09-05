@@ -17,6 +17,9 @@
     "entrypoints": {
         "main": [
           "dev.matthiesen.template_mod.fabric.ExampleMod"
+        ],
+        "fabric-datagen": [
+          "dev.matthiesen.template_mod.fabric.datagen.ExampleModDataGenerator"
         ]
     },
     "mixins": [

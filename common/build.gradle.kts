@@ -3,6 +3,15 @@ plugins {
     alias(libs.plugins.neoforged.moddev)
 }
 
+val generatedResourcesDir = file("src/generated/resources")
+
+sourceSets {
+    main {
+        resources.srcDirs(generatedResourcesDir)
+        resources.exclude { it.file.absolutePath.contains(".cache") }
+    }
+}
+
 neoForge {
     neoFormVersion = libs.versions.neo.form.get()
 
@@ -34,5 +43,6 @@ val commonResources = configurations.create("commonResources") {
 
 artifacts {
     add(commonJava.name, sourceSets.main.get().java.sourceDirectories.singleFile)
-    add(commonResources.name, sourceSets.main.get().resources.sourceDirectories.singleFile)
+    add(commonResources.name, file("src/main/resources"))
+    add(commonResources.name, generatedResourcesDir)
 }
